@@ -1,0 +1,1 @@
+export CLASSPATH=.:/home/daniel/lib/junit.jar:/home/daniel/lib/ucb.jar
