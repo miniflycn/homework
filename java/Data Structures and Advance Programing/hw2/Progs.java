@@ -1,6 +1,6 @@
 /** HW #1 solutions.
  *
- *  @author
+ *  @Daniel Yang
  */
 class Progs {
 
@@ -36,8 +36,12 @@ class Progs {
     /** Returns a list consisting of the elements of A followed by the
      *  elements of B.  May modify items of A. Don't use 'new'. */
     static IntList dcatenate(IntList A, IntList B) {
-        /* *Replace the following with the answer* */
-        return null;
+        IntList p = A;
+        for (; p.tail != null;) {
+            p = p.tail;
+        }
+        p.tail = B;
+        return A;
     }
 
     /* 2b. */
@@ -46,8 +50,19 @@ class Progs {
      *  Does not modify the original list elements.
      *  It is an error if the desired items don't exist. */
     static IntList sublist(IntList L, int start, int len) {
-        /* *Replace the following with the answer* */
-        return null;
+        IntList p,
+                j,
+                k;
+        for (p = L; start > 0; start--) {
+            p = p.tail;
+        }
+        k = j = new IntList(p.head, null);
+        for (len--; len > 0; len--) {
+            p = p.tail;
+            j.tail = new IntList(p.head, null);
+            j = j.tail;
+        }
+        return k;
     }
 
     /* 2c. */
@@ -56,8 +71,17 @@ class Progs {
      *  May modify the original list elements. Don't use 'new'.
      *  It is an error if the desired items don't exist. */
     static IntList dsublist(IntList L, int start, int len) {
-        /* *Replace the following with the answer* */
-        return null;
+        IntList p = L,
+                j;
+        for (; start > 0; start--) {
+            p = p.tail;
+        }
+        j = p;
+        for (len--; len > 0; len--) {
+            j = j.tail;
+        }
+        j.tail = null;
+        return p;
     }
 
 }

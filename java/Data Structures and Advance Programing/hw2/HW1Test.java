@@ -7,9 +7,9 @@ public class HW1Test {
     public static void main(String[] args) {
         report("factorSum", testFactorSum());
         report("printSociablePairs", testPrintSociablePairs());
-        // report("dcatenate", testDcatenate());
-        // report("sublist", testSublist());
-        // report("dsublist", testDsublist());
+        report("dcatenate", testDcatenate());
+        report("sublist", testSublist());
+        report("dsublist", testDsublist());
     }
 
     /** Print message that test NAME has (if ISOK) or else has not
@@ -38,17 +38,31 @@ public class HW1Test {
 
     /** Return true iff dcantenate passes its tests. */
     private static boolean testDcatenate() {
+        IntList A = IntList.list(1, 2),
+                B = IntList.list(3, 4);
+        if (Progs.dcatenate(A, B).equals(IntList.list(1, 2, 3, 4))) {
+            return true;
+        }
         return false;
     }
 
     /** Return true iff sublist passes its tests. */
     private static boolean testSublist() {
+        IntList L = IntList.list(1, 2, 3, 4, 5, 6);
+        if (Progs.sublist(L, 1, 3).equals(IntList.list(2, 3, 4))) {
+            return true;
+        }
         return false;
     }
 
     /** Return true iff dsublist passes its tests. */
     private static boolean testDsublist() {
+        IntList L = IntList.list(1, 2, 3, 4, 5, 6);
+        if (Progs.dsublist(L, 1, 3).equals(IntList.list(2, 3, 4))) {
+            return true;
+        }
         return false;
+
     }
 
 }
