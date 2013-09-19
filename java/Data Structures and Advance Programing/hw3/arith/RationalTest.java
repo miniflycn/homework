@@ -61,6 +61,24 @@ public class RationalTest {
     			 i = frac(1, 4);
     	assertTrue("1/2 - 1/4 should be 1/4", r.subtract(i).equals(frac(1, 4)));
     }
+    
+    @Test public void compareTo1() {
+    	Rational r = frac(1, 4),
+    			 i = frac(2, 8);
+    	assertTrue("1/4 should equal 2/8", r.compareTo(i) == 0);
+    }
+    
+    @Test public void compareTo2() {
+    	Rational r = frac(1, 4),
+    			 i = frac(3, 8);
+    	assertTrue("1/4 should less than 3/8", r.compareTo(i) < 0);
+    }
+    
+    @Test public void compareTo3() {
+    	Rational r = frac(1, 4),
+    			 i = frac(1, 8);
+    	assertTrue("1/4 should greater than 1/8", r.compareTo(i) > 0);
+    }
 }
 
 
