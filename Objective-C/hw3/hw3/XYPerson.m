@@ -42,6 +42,12 @@
     [formatter setDateStyle: NSDateFormatterFullStyle];
     NSLog(@"%@(%@) say: %@", self.fullName, self.birthday ? [formatter stringFromDate: self.birthday] : @"未知", greeting);
 }
+- (NSNumber *) measureHeight {
+    return self.height;
+}
+- (NSNumber *) measureWeight {
+    return self.weight;
+}
 + (id) person: (NSString *) aFirstName lastName: (NSString *) aLastName dateOfBirth: (NSDate *) aDOB {
     return [[self alloc] initWithFirstName: aFirstName lastName: aLastName dateOfBirth: aDOB];
 }

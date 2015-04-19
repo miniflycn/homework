@@ -14,10 +14,14 @@
 @property (readonly) NSString *lastName;
 @property (readonly) NSString *fullName;
 @property (readonly) NSDate *birthday;
+@property (readwrite) NSNumber *height;
+@property (readwrite) NSNumber *weight;
 - (id) initWithFirstName: (NSString *) aFirstName lastName: (NSString *) aLastName dateOfBirth: (NSDate *) aDOB;
 - (id) initWithFirstName: (NSString *) aFirstName lastName: (NSString *) aLastName;
 - (void) sayHello;
 - (void) saySomething: (NSString *) greeting;
+- (NSNumber *) measureHeight;
+- (NSNumber *) measureWeight;
 + (id) person: (NSString *) aFirstName lastName: (NSString *) aLastName dateOfBirth: (NSDate *) aDOB;
 + (id) person;
 @end
