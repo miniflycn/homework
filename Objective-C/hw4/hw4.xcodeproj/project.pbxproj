@@ -83,8 +83,8 @@
 			children = (
 				60642F941AE3F56200D815FC /* AppDelegate.h */,
 				60642F951AE3F56200D815FC /* AppDelegate.m */,
-				60642F971AE3F56200D815FC /* ViewController.h */,
 				60642F981AE3F56200D815FC /* ViewController.m */,
+				60642F971AE3F56200D815FC /* ViewController.h */,
 				60642F9A1AE3F56200D815FC /* Main.storyboard */,
 				60642F9D1AE3F56200D815FC /* Images.xcassets */,
 				60642F9F1AE3F56200D815FC /* LaunchScreen.xib */,
