@@ -14,6 +14,20 @@
 
 @implementation ViewController
 
+- (void) loadView {
+    [super loadView];
+    
+    UIView *view = [[UIView alloc] initWithFrame: [UIScreen mainScreen].applicationFrame];
+    view.alpha = 0.5;
+    view.backgroundColor = [UIColor cyanColor];
+    self.view = view;
+    
+    UILabel *lab = [[UILabel alloc] initWithFrame: CGRectMake(100, 100, 100, 100)];
+    lab.text = @"Hello World!";
+    
+    [self.view addSubview: lab];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
