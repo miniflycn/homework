@@ -14,7 +14,9 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         XYPerson *personA = [[XYPerson alloc] init];
         [personA sayHello];
-        XYShoutingPerson *personB = [XYShoutingPerson person: @"Donald" lastName: @"Yang" dateOfBirth: [NSDate date]];
+        NSMutableString *firstName = [NSMutableString stringWithString: @"Donald"];
+        XYShoutingPerson *personB = [XYShoutingPerson person: firstName lastName: @"Yang" dateOfBirth: [NSDate date]];
+        [firstName appendString: @"(Tencent)"];
         [personB sayHello];
         XYPerson *personC;
         if (personC == nil) {
